@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAMAZI — Download</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #14532d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, sans-serif;
+      color: white;
+    }
+    .container { text-align: center; padding: 2rem; }
+    .emoji { font-size: 3rem; margin-bottom: 1rem; }
+    p { color: #86efac; font-size: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="emoji">🕌</div>
+    <h1 style="font-size:1.5rem; margin-bottom:0.5rem;">NAMAZI</h1>
+    <p>Redirecting you to the right store…</p>
+  </div>
+  <script>
+    var ua = navigator.userAgent;
+    if (/android/i.test(ua)) {
+      window.location.replace('/android-app');
+    } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+      window.location.replace('/ios-app');
+    } else {
+      window.location.replace('/android-app');
+    }
+  </script>
+</body>
+</html>

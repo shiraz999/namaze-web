@@ -7,6 +7,7 @@ import Benefits from './components/sections/Benefits'
 import UseCases from './components/sections/UseCases'
 import FutureVision from './components/sections/FutureVision'
 import CommunityLeaderCTA from './components/sections/CommunityLeaderCTA'
+import DownloadQR from './components/sections/DownloadQR'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Benefits />
         <UseCases />
         <FutureVision />
+        <DownloadQR />
         <CommunityLeaderCTA />
       </main>
       <Footer />
