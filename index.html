@@ -15,9 +15,9 @@
           var decoded = search.slice(1).split('&').map(function(s) {
             return s.replace(/~and~/g, '&');
           });
-          var path = decoded[0].slice(2);
+          var path = decoded[0].slice(2); // removes "p=" prefix; value already starts with "/"
           var query = decoded[1] ? ('?' + decoded[1].slice(2)) : '';
-          window.history.replaceState(null, null, '/' + path + query + location.hash);
+          window.history.replaceState(null, null, path + query + location.hash);
         }
       })();
     </script>
