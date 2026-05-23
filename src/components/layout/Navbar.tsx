@@ -6,6 +6,7 @@ const navLinks = [
   { label: 'For Masjids', href: '#masjid-management' },
   { label: 'Benefits', href: '#benefits' },
   { label: 'Future', href: '#future-vision' },
+  { label: 'Video Guides', href: '/video-guide' },
 ]
 
 export default function Navbar() {
