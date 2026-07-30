@@ -6,6 +6,7 @@ const links = [
   { label: 'Use Cases', href: '#use-cases' },
   { label: 'Future Vision', href: '#future-vision' },
   { label: 'For Masjids', href: '#masjid-management' },
+  { label: 'Privacy Policy', href: '/privacy' },
 ]
 
 export default function Footer() {
