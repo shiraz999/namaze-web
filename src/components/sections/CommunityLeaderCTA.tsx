@@ -1,4 +1,5 @@
 import AppStoreBadge from '../ui/AppStoreBadge'
+import { APP_STORE_URL, PLAY_STORE_URL } from '../../config/storeLinks'
 
 export default function CommunityLeaderCTA() {
   return (
@@ -42,8 +43,8 @@ export default function CommunityLeaderCTA() {
         </div>
 
         <div className="flex justify-center gap-4 flex-wrap">
-          <AppStoreBadge store="apple" />
-          <AppStoreBadge store="google" />
+          <AppStoreBadge store="apple" href={APP_STORE_URL} />
+          <AppStoreBadge store="google" href={PLAY_STORE_URL} />
         </div>
 
         <p className="text-primary-500 text-sm mt-8">

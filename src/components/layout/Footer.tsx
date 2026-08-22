@@ -1,4 +1,5 @@
 import AppStoreBadge from '../ui/AppStoreBadge'
+import { APP_STORE_URL, PLAY_STORE_URL } from '../../config/storeLinks'
 
 const links = [
   { label: 'Features', href: '#features' },
@@ -24,8 +25,8 @@ export default function Footer() {
               The digital bridge between the masjid and the community. Free on Android and iOS.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <AppStoreBadge store="apple" />
-              <AppStoreBadge store="google" />
+              <AppStoreBadge store="apple" href={APP_STORE_URL} />
+              <AppStoreBadge store="google" href={PLAY_STORE_URL} />
             </div>
           </div>
 

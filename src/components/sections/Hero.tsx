@@ -1,5 +1,6 @@
 import AppStoreBadge from '../ui/AppStoreBadge'
 import PhoneMockup from '../ui/PhoneMockup'
+import { APP_STORE_URL, PLAY_STORE_URL } from '../../config/storeLinks'
 
 export default function Hero() {
   return (
@@ -46,8 +47,8 @@ export default function Hero() {
 
             {/* App store badges */}
             <div id="download" className="flex flex-wrap gap-3">
-              <AppStoreBadge store="apple" />
-              <AppStoreBadge store="google" />
+              <AppStoreBadge store="apple" href={APP_STORE_URL} />
+              <AppStoreBadge store="google" href={PLAY_STORE_URL} />
             </div>
 
             {/* Social proof */}

@@ -3,7 +3,9 @@ interface Props {
   href?: string
 }
 
-export default function AppStoreBadge({ store, href = '#' }: Props) {
+export default function AppStoreBadge({ store, href }: Props) {
+  if (!href) return null
+
   if (store === 'apple') {
     return (
       <a

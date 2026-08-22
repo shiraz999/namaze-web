@@ -1,6 +1,7 @@
 import { QRCodeSVG } from 'qrcode.react'
+import { PLAY_STORE_URL } from '../../config/storeLinks'
 
-const DOWNLOAD_URL = 'https://namazi-app.com/download'
+const DOWNLOAD_URL = PLAY_STORE_URL
 
 export default function DownloadQR() {
   return (
@@ -35,17 +36,13 @@ export default function DownloadQR() {
               Point your camera.<br />Download instantly.
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Scan the QR code with your phone's camera — no app needed. It automatically
-              opens the right store for your device.
+              Scan the QR code with your phone's camera — no app needed. It takes you
+              straight to the Google Play listing.
             </p>
             <div className="flex flex-wrap gap-3 text-sm">
               <span className="flex items-center gap-1.5 text-gray-500">
                 <span className="w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center text-xs">✓</span>
                 Android → Google Play
-              </span>
-              <span className="flex items-center gap-1.5 text-gray-500">
-                <span className="w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center text-xs">✓</span>
-                iPhone → App Store
               </span>
             </div>
           </div>
