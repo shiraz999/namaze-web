@@ -6,6 +6,10 @@ const videos = [
     id: 'Gt25X3JQU4M',
     caption: 'Application Use Guide',
   },
+  {
+    id: 'E9l_H0-VeOk',
+    caption: 'Masjid Registration',
+  },
 ]
 
 export default function VideoGuide() {
