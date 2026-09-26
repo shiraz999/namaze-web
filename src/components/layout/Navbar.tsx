@@ -10,6 +10,7 @@ const navLinks: NavLink[] = [
   { label: 'Benefits', href: '#benefits' },
   { label: 'Future', href: '#future-vision' },
   { label: 'Video Guides', href: '/video-guide', internal: true },
+  { label: 'Tips', href: '/tips', internal: true },
 ]
 
 export default function Navbar() {

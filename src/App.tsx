@@ -10,6 +10,7 @@ import FutureVision from './components/sections/FutureVision'
 import CommunityLeaderCTA from './components/sections/CommunityLeaderCTA'
 import DownloadQR from './components/sections/DownloadQR'
 import VideoGuide from './pages/VideoGuide'
+import Tips from './pages/Tips'
 
 function Home() {
   return (
@@ -36,6 +37,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/video-guide" element={<VideoGuide />} />
+        <Route path="/video-guide/:slug" element={<VideoGuide />} />
+        <Route path="/tips" element={<Tips />} />
       </Routes>
     </BrowserRouter>
   )
