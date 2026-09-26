@@ -1,8 +1,21 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Navbar from '../components/layout/Navbar'
 import Footer from '../components/layout/Footer'
 import { tipLanguages } from '../data/tips'
 
 export default function Tips() {
+  const { hash } = useLocation()
+
+  // The browser can't jump to #hindi/#urdu on first load because the sections
+  // render after it tries, so scroll once mounted and again after web fonts shift the layout.
+  useEffect(() => {
+    if (!hash) return
+    const scrollToHash = () => document.getElementById(hash.slice(1))?.scrollIntoView()
+    scrollToHash()
+    document.fonts?.ready.then(scrollToHash)
+  }, [hash])
+
   return (
     <>
       <Navbar />
