@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import AppStoreBadge from '../ui/AppStoreBadge'
 import { APP_STORE_URL, PLAY_STORE_URL } from '../../config/storeLinks'
 
@@ -29,17 +30,18 @@ export default function CommunityLeaderCTA() {
         </h2>
 
         <p className="text-primary-300 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-          Register your masjid on NAMAZI and reach your congregation directly. Share prayer times,
-          broadcasts, and announcements — all in one place, completely free.
+          Register your masjid on NAMAZI and reach your congregation directly. Keep prayer times up
+          to date, send Elan and Bayan broadcasts, and build your masjid team — all in one place,
+          completely free. Every new masjid is reviewed before it goes live.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
           <a href="#download" className="btn-gold text-base py-4 px-8">
             Get Started — Download Free
           </a>
-          <a href="#features" className="btn-outline text-base py-4 px-8">
-            Learn More
-          </a>
+          <Link to="/video-guide/masjid-registration" className="btn-outline text-base py-4 px-8">
+            Watch Registration Guide
+          </Link>
         </div>
 
         <div className="flex justify-center gap-4 flex-wrap">

@@ -6,9 +6,9 @@ export interface RoadmapItem {
 
 export const roadmapItems: RoadmapItem[] = [
   {
-    icon: '📅',
-    title: 'Islamic Calendar',
-    description: 'Hijri calendar integration with Ramadan, Eid, and important Islamic date highlights.',
+    icon: '🍎',
+    title: 'iPhone App',
+    description: 'NAMAZI on the Apple App Store, so every iPhone user can stay connected to their masjid.',
   },
   {
     icon: '🌙',
@@ -26,9 +26,9 @@ export const roadmapItems: RoadmapItem[] = [
     description: 'Daily Hadees channels, Quran reading tools, and Dhikr counters.',
   },
   {
-    icon: '🗺️',
+    icon: '📊',
     title: 'Masjid Map Stats',
-    description: 'Track total masjids nationwide, by city, and nearby. See every masjid you have visited.',
+    description: 'Total masjids nationwide and by city, plus a history of every masjid you have visited.',
   },
   {
     icon: '📡',

@@ -5,8 +5,9 @@ import { Check } from 'lucide-react'
 
 const mockupColors: Record<string, string> = {
   'prayer-times': 'bg-primary-800',
+  'masjid-finder': 'bg-primary-700',
+  'auto-silent': 'bg-primary-900',
   broadcasts: 'bg-primary-700',
-  qibla: 'bg-primary-900',
   'masjid-management': 'bg-primary-800',
 }
 
@@ -16,7 +17,7 @@ export default function Features() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-4">
         <SectionHeading
           title="Everything You Need in One App"
-          subtitle="Four powerful features designed around the daily needs of every Muslim and every masjid."
+          subtitle="Powerful features designed around the daily needs of every Muslim and every masjid."
         />
       </div>
 

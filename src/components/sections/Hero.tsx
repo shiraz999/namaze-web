@@ -41,7 +41,8 @@ export default function Hero() {
               The digital bridge between the masjid and the community
             </p>
             <p className="text-primary-200 text-lg mb-8 leading-relaxed">
-              Prayer times, Qibla finder, masjid broadcasts, and more — all in one free app.
+              Prayer times & Azan alerts, nearby masjids on a map, auto-silent at the masjid,
+              Qibla, Islamic calendar and masjid broadcasts — all in one free app.
               Available in English, Hindi & Urdu.
             </p>
 
@@ -59,7 +60,7 @@ export default function Hero() {
 
           {/* Phone mockup */}
           <div className="flex justify-center md:justify-end">
-            <PhoneMockup label="Prayer Times · Qibla · Broadcasts" bgColor="bg-primary-800" />
+            <PhoneMockup label="Prayer Times · Masjid Finder · Auto-Silent" bgColor="bg-primary-800" />
           </div>
         </div>
       </div>

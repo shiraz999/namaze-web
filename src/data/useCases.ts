@@ -24,6 +24,18 @@ export const useCases: UseCase[] = [
       'Discovers nearby masjids, follows their broadcasts, and feels connected to the community from day one.',
   },
   {
+    emoji: '🔕',
+    persona: 'The Regular at the Masjid',
+    description:
+      'Walks in for every namaz without reaching for their phone — it silences itself on arrival and the ringer comes back after they leave.',
+  },
+  {
+    emoji: '🌅',
+    persona: 'The Early Riser',
+    description:
+      'Wakes to the Azan for Fajr and checks Awwal times from their location, with the whole year’s timetable a tap away.',
+  },
+  {
     emoji: '🕌',
     persona: 'The Masjid Administrator',
     description:

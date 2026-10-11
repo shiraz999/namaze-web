@@ -55,6 +55,13 @@ export const tipLanguages: TipLanguage[] = [
         ],
       },
       {
+        emoji: '🏗️',
+        title: 'Register Masjid',
+        tips: [
+          "While registering a masjid, make sure your phone's location service is on and you're standing at the centre of the masjid, then tap \"Recapture\".",
+        ],
+      },
+      {
         emoji: '📢',
         title: 'Broadcast',
         tips: [
@@ -120,6 +127,13 @@ export const tipLanguages: TipLanguage[] = [
         ],
       },
       {
+        emoji: '🏗️',
+        title: 'मस्जिद रजिस्टर करें',
+        tips: [
+          'मस्जिद रजिस्टर करते समय सुनिश्चित करें कि आपके फ़ोन की लोकेशन सर्विस ऑन हो और आप मस्जिद के बीचों-बीच खड़े हों, फिर "Recapture" पर टैप करें।',
+        ],
+      },
+      {
         emoji: '📢',
         title: 'ब्रॉडकास्ट',
         tips: [
@@ -182,6 +196,13 @@ export const tipLanguages: TipLanguage[] = [
           'مسجد کا ایڈیٹر نماز کے اوقات اپڈیٹ کر سکتا ہے۔',
           'امام یا ذمہ دار مسجد کی تفصیلات جیسے لوکیشن، سہولیات اور تصاویر اپڈیٹ کر سکتے ہیں۔',
           'امام یا ذمہ دار مسجد کے پیپل ٹیب سے ایڈیٹر، مؤذن اور دیگر رول شامل یا ختم کر سکتے ہیں۔',
+        ],
+      },
+      {
+        emoji: '🏗️',
+        title: 'مسجد رجسٹر کریں',
+        tips: [
+          'مسجد رجسٹر کرتے وقت یقینی بنائیں کہ آپ کے فون کی لوکیشن سروس آن ہو اور آپ مسجد کے بالکل درمیان میں کھڑے ہوں، پھر "Recapture" پر ٹیپ کریں۔',
         ],
       },
       {

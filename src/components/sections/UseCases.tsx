@@ -8,10 +8,10 @@ export default function UseCases() {
       <div className="section-container">
         <SectionHeading
           title="NAMAZI Works for Everyone"
-          subtitle="Whether you are a traveller, a busy professional, or a masjid administrator — NAMAZI has you covered."
+          subtitle="Whether you are a traveller, a masjid regular, or a masjid administrator — NAMAZI has you covered."
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {useCases.map((uc) => (
             <UseCaseCard key={uc.persona} useCase={uc} />
           ))}

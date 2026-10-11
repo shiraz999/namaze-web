@@ -6,6 +6,7 @@ const links = [
   { label: 'Benefits', href: '#benefits' },
   { label: 'Use Cases', href: '#use-cases' },
   { label: 'Future Vision', href: '#future-vision' },
+  { label: 'FAQ', href: '#faq' },
   { label: 'For Masjids', href: '#masjid-management' },
   { label: 'Privacy Policy', href: '/privacy' },
 ]
@@ -22,7 +23,7 @@ export default function Footer() {
               <span className="font-display font-bold text-xl text-gold-400">NAMAZI</span>
             </div>
             <p className="text-primary-300 text-sm leading-relaxed mb-6">
-              The digital bridge between the masjid and the community. Free on Android and iOS.
+              The digital bridge between the masjid and the community. Free on Android · iPhone coming soon.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <AppStoreBadge store="apple" href={APP_STORE_URL} />

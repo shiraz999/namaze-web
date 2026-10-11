@@ -8,7 +8,7 @@ const navLinks: NavLink[] = [
   { label: 'Features', href: '#features' },
   { label: 'For Masjids', href: '#masjid-management' },
   { label: 'Benefits', href: '#benefits' },
-  { label: 'Future', href: '#future-vision' },
+  { label: 'FAQ', href: '#faq' },
   { label: 'Video Guides', href: '/video-guide', internal: true },
   { label: 'Tips', href: '/tips', internal: true },
 ]

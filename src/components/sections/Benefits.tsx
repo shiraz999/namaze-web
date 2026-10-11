@@ -2,19 +2,22 @@ import SectionHeading from '../ui/SectionHeading'
 import BenefitItem from '../ui/BenefitItem'
 
 const communityBenefits = [
-  'Never miss a prayer with personalised notifications',
+  'Never miss a prayer with personalised Azan alerts',
   'Find nearby masjids instantly — at home or while travelling',
+  'Phone goes silent automatically inside the masjid',
   'Receive masjid announcements without joining WhatsApp groups',
-  'Use Qibla finder anywhere in the world',
+  'Awwal times, Hijri calendar and Qibla finder anywhere in the world',
+  'Keeps working with saved data when you are offline',
   'Available in English, Hindi, and Urdu',
   'Completely free — no ads, no subscriptions',
 ]
 
 const leaderBenefits = [
   'Reach your congregation directly on their phones',
-  'Share announcements, media, and event reminders instantly',
-  'Manage prayer times and masjid profile digitally',
-  'Structured role-based access for your team',
+  'Send flash or scheduled announcements with images, audio and video',
+  'Set namaz times as Automatic (Awwal Waqt + offset) or Manual',
+  'Manage your masjid profile, facilities and photos digitally',
+  'Assign Imam, Zimmedar, Muazzin and Editor roles using user codes',
   'Strengthen the bond between Imam and community',
   'Free for all masjids — forever',
 ]
