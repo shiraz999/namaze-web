@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.namazi.mobile",
+      "sha256_cert_fingerprints": [
+        "76:DB:79:1F:71:14:98:2E:6C:AD:0E:E6:28:EC:0D:89:AA:FC:B0:30:A6:CA:1C:AE:39:CE:9E:30:5A:0C:A2:F8",
+        "2F:48:2B:A5:DC:96:55:C4:53:36:37:66:E4:61:65:CF:1A:87:82:85:3E:D1:7E:6B:7D:38:DC:12:7C:EB:FD:54"
+      ]
+    }
+  }
+]

@@ -61,7 +61,20 @@ export default function Footer() {
                 </span>
               ))}
             </div>
-            <p className="text-primary-400 text-sm">Free to download. No ads. No subscriptions.</p>
+            <p className="text-primary-400 text-sm mb-6">Free to download. No ads. No subscriptions.</p>
+
+            <h4 className="font-semibold text-white mb-2">Need Help?</h4>
+            <p className="text-primary-300 text-sm">
+              To get help call us on WhatsApp:{' '}
+              <a
+                href="https://wa.me/919669443996"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold-400 hover:text-gold-300 font-semibold whitespace-nowrap"
+              >
+                9669443996
+              </a>
+            </p>
           </div>
         </div>
 

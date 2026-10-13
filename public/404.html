@@ -3,8 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <script>
-      // GitHub Pages SPA redirect: encode the path into the query string
       var l = window.location;
+
+      // Shared-masjid links from the app (https://namazi-app.com/masjid/<id>):
+      // GitHub Pages can't rewrite, so forward to the static landing page.
+      var masjidMatch = l.pathname.match(/^\/masjid\/([^\/?#]+)\/?$/);
+      if (masjidMatch) {
+        l.replace('/masjid/?id=' + masjidMatch[1]);
+      } else
+      // GitHub Pages SPA redirect: encode the path into the query string
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
         l.pathname.split('/').slice(0, 1).join('/') +

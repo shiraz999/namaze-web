@@ -48,6 +48,10 @@ export const faqs: FaqItem[] = [
     answer: 'NAMAZI is available in English, Hindi and Urdu.',
   },
   {
+    question: 'How do I get help?',
+    answer: 'To get help call us on WhatsApp: 9669443996. You can also email support@namazi-app.com.',
+  },
+  {
     question: 'How do I delete my account or my data?',
     answer: 'Email support@namazi-app.com and we will process your request to access, correct or delete your data.',
   },
