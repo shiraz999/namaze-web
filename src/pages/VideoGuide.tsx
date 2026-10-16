@@ -88,13 +88,13 @@ export default function VideoGuide() {
                   <h2 className="font-display font-bold text-2xl sm:text-3xl text-primary-900 mb-6">
                     {section.title}
                   </h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {section.videos.map((video) => (
                       <div
                         key={video.slug}
                         id={video.slug}
-                        className={`bg-white rounded-2xl shadow-md overflow-hidden flex flex-col transition-shadow scroll-mt-28 ${
-                          video.landscape ? 'sm:col-span-2' : ''
+                        className={`bg-white rounded-2xl shadow-md overflow-hidden flex flex-col transition-shadow scroll-mt-28 w-full mx-auto ${
+                          video.landscape ? 'sm:col-span-2 max-w-xl sm:max-w-none' : 'max-w-[260px] sm:max-w-none'
                         } ${slug === video.slug ? 'ring-4 ring-primary-500 shadow-xl' : ''}`}
                       >
                         <div
