@@ -27,14 +27,42 @@
     <p>Redirecting you to the right store…</p>
   </div>
   <script>
+    // GoatCounter site code — the dashboard lives at https://<code>.goatcounter.com
+    var GOATCOUNTER_CODE = 'namazi';
+
     var ua = navigator.userAgent;
+    var platform, target;
     if (/android/i.test(ua)) {
-      window.location.replace('/android-app');
-    } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
-      window.location.replace('/ios-app');
+      platform = 'android';
+      target = '/android-app';
+    } else if (/iPad|iPhone|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) {
+      // iPadOS 13+ reports itself as a Mac, so detect it via touch support.
+      platform = 'ios';
+      target = '/ios-app';
     } else {
-      window.location.replace('/android-app');
+      platform = 'other';
+      target = '/android-app';
     }
+
+    // The QR code links to /download?src=qr, so scans are counted separately from link clicks.
+    var source = new URLSearchParams(location.search).get('src') === 'qr' ? 'qr' : 'link';
+
+    var redirected = false;
+    function go() {
+      if (redirected) return;
+      redirected = true;
+      // Pass the source on so the store page can tag the Play Store link with it.
+      window.location.replace(target + '?src=' + source);
+    }
+
+    // Record the hit as a GoatCounter event, then redirect once it is sent (or after 1s at most).
+    var pixel = new Image();
+    pixel.onload = pixel.onerror = go;
+    pixel.src = 'https://' + GOATCOUNTER_CODE + '.goatcounter.com/count'
+      + '?p=' + encodeURIComponent(source + '-' + platform)
+      + '&t=' + encodeURIComponent('Download ' + source + ' (' + platform + ')')
+      + '&e=true&rnd=' + Math.random().toString(36).slice(2);
+    setTimeout(go, 1000);
   </script>
 </body>
 </html>

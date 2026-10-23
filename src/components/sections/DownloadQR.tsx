@@ -1,7 +1,8 @@
 import { QRCodeSVG } from 'qrcode.react'
 
 // Points at /download, which redirects Android to Google Play and iOS to /ios-app.
-const DOWNLOAD_URL = 'https://namazi-app.com/download'
+// ?src=qr lets /download count QR scans separately from regular link clicks.
+const DOWNLOAD_URL = 'https://namazi-app.com/download?src=qr'
 
 export default function DownloadQR() {
   return (

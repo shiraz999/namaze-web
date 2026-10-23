@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NAMAZI — Download for Android</title>
-  <meta http-equiv="refresh" content="2; url=https://play.google.com/store/apps/details?id=com.namazi.mobile" />
+  <noscript><meta http-equiv="refresh" content="2; url=https://play.google.com/store/apps/details?id=com.namazi.mobile&referrer=utm_source%3Dwebsite%26utm_medium%3Ddownload_page" /></noscript>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -97,7 +97,7 @@
       NAMAZI is available free on the Google Play Store.<br/><br/>
       Taking you to Google Play…
     </p>
-    <a href="https://play.google.com/store/apps/details?id=com.namazi.mobile" class="btn">
+    <a id="play-link" href="https://play.google.com/store/apps/details?id=com.namazi.mobile" class="btn">
       <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
         <path d="M3.18 23.76c.3.17.64.24.99.2L15.9 12 12 8.1 3.18 23.76zM20.77 10.49l-2.6-1.49-4.17 3.99 4.17 4 2.62-1.5c.75-.43.75-1.57-.02-2.5v.5zM1.8.3C1.54.56 1.4.97 1.4 1.5v21c0 .53.14.94.4 1.2L2 23.9l11.5-11.5v-.4L2 .5l-.2-.2zM15.9 12l3.17-3.17-2.6-1.5L12 9.9 15.9 12z"/>
       </svg>
@@ -106,5 +106,14 @@
     <p class="coming-soon">Free · No ads · No subscriptions</p>
     <div class="back"><a href="/">← Back to namazi-app.com</a></div>
   </div>
+  <script>
+    // Tag the Play Store link so Play Console reports installs from QR scans (utm_source=qr_code)
+    // separately from other visits (utm_source=website).
+    var source = new URLSearchParams(location.search).get('src') === 'qr' ? 'qr_code' : 'website';
+    var playUrl = 'https://play.google.com/store/apps/details?id=com.namazi.mobile'
+      + '&referrer=' + encodeURIComponent('utm_source=' + source + '&utm_medium=download_page');
+    document.getElementById('play-link').href = playUrl;
+    setTimeout(function () { window.location.replace(playUrl); }, 2000);
+  </script>
 </body>
 </html>
