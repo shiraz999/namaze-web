@@ -63,10 +63,13 @@
     // Record the hit as a GoatCounter event, then redirect once it is sent (or after 1s at most).
     var pixel = new Image();
     pixel.onload = pixel.onerror = go;
+    var queryParams = window.location.search.replace(/^\?/, '');
     pixel.src = 'https://' + GOATCOUNTER_CODE + '.goatcounter.com/count'
       + '?p=' + encodeURIComponent(source + '-' + platform)
       + '&t=' + encodeURIComponent('Download ' + source + ' (' + platform + ')')
-      + '&e=true&rnd=' + Math.random().toString(36).slice(2);
+      + '&e=true'
+      + '&q=' + encodeURIComponent(queryParams)
+      + '&rnd=' + Math.random().toString(36).slice(2);
     setTimeout(go, 1000);
   </script>
 </body>
