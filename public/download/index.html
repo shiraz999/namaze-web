@@ -45,7 +45,12 @@
     }
 
     // The QR code links to /download?src=qr, so scans are counted separately from link clicks.
-    var source = new URLSearchParams(location.search).get('src') === 'qr' ? 'qr' : 'link';
+    var params = new URLSearchParams(window.location.search);
+
+    var source = params.get('src') || 'link';
+
+    // Keep source names safe and consistent
+    source = source.toLowerCase().replace(/[^a-z0-9_-]/g, '_').slice(0, 40);
 
     var redirected = false;
     function go() {
