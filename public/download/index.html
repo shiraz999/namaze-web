@@ -66,17 +66,19 @@
       window.location.replace(target + '?src=' + source);
     }
 
-    // Record the hit as a GoatCounter event, then redirect once it is sent (or after 1s at most).
+    // Record the hit in GoatCounter, then redirect once it is sent (or after 1s at most).
     var pixel = new Image();
     pixel.onload = pixel.onerror = go;
-    // GoatCounter reads the campaign from utm_campaign in the q parameter,
-    // so translate ?campaign=launch into utm_campaign=launch.
-    var queryParams = campaign ? 'utm_campaign=' + encodeURIComponent(campaign) : '';
+    // GoatCounter reads the campaign (utm_campaign) and its source (utm_source) from the q parameter,
+    // e.g. ?campaign=launch&src=imam shows as campaign "launch" with source "imam".
+    // GoatCounter ignores q for events, so this hit is sent as a pageview (no e=true).
+    var queryParams = campaign
+      ? 'utm_campaign=' + encodeURIComponent(campaign) + '&utm_source=' + encodeURIComponent(source)
+      : '';
     pixel.src = 'https://' + GOATCOUNTER_CODE + '.goatcounter.com/count'
-      + '?p=' + encodeURIComponent(source + '-' + platform)
+      + '?p=' + encodeURIComponent('/' + source + '-' + platform)
       + '&t=' + encodeURIComponent('Download ' + source + ' (' + platform + ')'
           + (campaign ? ' – ' + campaign : ''))
-      + '&e=true'
       + '&q=' + encodeURIComponent(queryParams)
       + '&rnd=' + Math.random().toString(36).slice(2);
     setTimeout(go, 1000);
