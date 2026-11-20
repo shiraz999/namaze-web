@@ -49,8 +49,14 @@
 
     var source = params.get('src') || 'link';
 
-    // Keep source names safe and consistent
-    source = source.toLowerCase().replace(/[^a-z0-9_-]/g, '_').slice(0, 40);
+    // Keep source and campaign names safe and consistent
+    function clean(value) {
+      return value.toLowerCase().replace(/[^a-z0-9_-]/g, '_').slice(0, 40);
+    }
+    source = clean(source);
+
+    // Optional campaign, e.g. /download?campaign=launch&src=imam
+    var campaign = clean(params.get('campaign') || params.get('utm_campaign') || '');
 
     var redirected = false;
     function go() {
@@ -63,10 +69,13 @@
     // Record the hit as a GoatCounter event, then redirect once it is sent (or after 1s at most).
     var pixel = new Image();
     pixel.onload = pixel.onerror = go;
-    var queryParams = window.location.search.replace(/^\?/, '');
+    // GoatCounter reads the campaign from utm_campaign in the q parameter,
+    // so translate ?campaign=launch into utm_campaign=launch.
+    var queryParams = campaign ? 'utm_campaign=' + encodeURIComponent(campaign) : '';
     pixel.src = 'https://' + GOATCOUNTER_CODE + '.goatcounter.com/count'
       + '?p=' + encodeURIComponent(source + '-' + platform)
-      + '&t=' + encodeURIComponent('Download ' + source + ' (' + platform + ')')
+      + '&t=' + encodeURIComponent('Download ' + source + ' (' + platform + ')'
+          + (campaign ? ' – ' + campaign : ''))
       + '&e=true'
       + '&q=' + encodeURIComponent(queryParams)
       + '&rnd=' + Math.random().toString(36).slice(2);
